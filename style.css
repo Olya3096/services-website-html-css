@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../html-pr3/fonts/avenir/Avenir-Book.ttf") format("truetype"),
+    url("../html-pr3/fonts/avenir/Avenir-Heavy.ttf") format("truetype"),
+    url("../html-pr3/fonts/avenir/Avenir-Medium.ttf") format("truetype"),
+    url("../html-pr3/fonts/avenir/Avenir-Roman.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("../html-pr3/fonts/helvetica/Helvetica-Bold.ttf");
+  src: url("../html-pr3/fonts/helvetica/Helvetica-Regular.ttf");
+  font-style: normal;
+}
