@@ -79,6 +79,7 @@ body {
 }
 
 .logo {
+  height: 20px;
   display: flex;
   align-items: flex-end;
   gap: 9px;
@@ -126,6 +127,9 @@ body {
 }
 
 .btn-request {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 210px;
   height: 30px;
   background-color: #fff;
@@ -260,7 +264,7 @@ body {
   flex-direction: column;
 }
 
-.title-features-section {
+.title-footer-features-sections {
   width: 300px;
   font-family: "Helvetica";
   font-size: 20px;
@@ -321,6 +325,8 @@ body {
 }
 
 .btn-learn-more-grid {
+  display: flex;
+  align-items: center;
   padding: 5px;
   text-decoration: none;
   font-family: "Avenir";
@@ -405,6 +411,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .testimonials-title {
@@ -418,17 +425,14 @@ body {
 .testimonials-items {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-.arrow {
-  color: #fff;
-  font-size: 30px;
+  gap: 13px;
+  margin-bottom: 15px;
 }
 
 .testimonial {
   padding: 10px;
   background-color: #fff;
+  border: 1px solid rgb(156, 105, 226);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -438,24 +442,70 @@ body {
 
 .client-photo {
   border-radius: 50%;
+  aspect-ratio: 1/1;
   width: 90px;
   height: 90px;
   object-fit: cover;
   margin-bottom: 10px;
 }
 
-.first-testomonial {
+.info-testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first-testimonial {
   width: 200px;
   height: 300px;
   box-shadow: 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
-.second-testomonial {
+.second-testimonial {
   display: none;
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 10px 0 rgba(65, 0, 153, 0.1);
+  position: relative;
+}
+.second-testimonial::after {
+  content: "";
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
 }
 
-.third-testomonial {
+.third-testimonial {
   display: none;
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 10px 0 rgba(65, 0, 153, 0.1);
+  position: relative;
+}
+
+.third-testimonial::after {
+  content: "";
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
 }
 
 .testimonial-name {
@@ -475,10 +525,21 @@ body {
 .testimonial-content {
   font-family: "Avenir";
   font-size: 14px;
+  color: rgb(75, 93, 104);
+}
+
+.scroll-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll-arrows {
+  display: flex;
+  gap: 20px;
 }
 
 .scroll-dots {
-  padding: 5px;
   display: flex;
   align-items: center;
 }
@@ -491,6 +552,153 @@ body {
 
 .dots {
   color: white;
+}
+
+.footer-border {
+  border-top: 2px solid rgba(156, 105, 226, 0.2);
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.first-footer-section {
+  padding: 30px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-title {
+  font-family: "Helvetica";
+  font-weight: 700;
+  font-size: 20px;
+  color: rgb(33, 35, 83);
+}
+
+.footer-text {
+  padding: 10px 0;
+  font-size: 14px;
+  color: rgb(75, 93, 104);
+  font-family: "Avenir";
+  font-weight: 500;
+}
+
+.footer-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-learn-more-btn {
+  padding: 10px 24px;
+  border-radius: 50px;
+  background-color: rgb(240, 99, 184);
+  border: none;
+  color: #fff;
+  font-family: "Avenir";
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.second-footer-section {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.company-info {
+  width: 220px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-text {
+  font-family: "Avenir";
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(33, 35, 83);
+}
+
+.address {
+  padding: 20px 0;
+  font-family: "Avenir";
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(33, 35, 83);
+}
+
+.email-phone {
+  padding: 5px 0;
+  text-decoration: none;
+  font-family: "Avenir";
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+  color: rgb(33, 35, 83);
+  transition-duration: 0ms;
+}
+
+.about-help-social-footer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  gap: 10px;
+  align-items: center;
+}
+
+.about-help-social-titles {
+  margin-bottom: 10px;
+  font-family: "Avenir";
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(33, 35, 83);
+}
+
+.footer-links {
+  font-family: "Avenir";
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(33, 35, 83);
+  cursor: not-allowed;
+}
+
+.features-footer {
+  font-family: "Avenir";
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  color: rgb(33, 35, 83);
+  cursor: pointer;
+  transition-duration: 0;
+}
+
+.third-footer-section {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 30px;
+}
+
+.company-rights {
+  width: 250px;
+  font-family: "Avenir";
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(33, 35, 83);
+  text-align: center;
 }
 
 @media (hover: hover) {
@@ -523,8 +731,20 @@ body {
     background: rgb(240, 99, 184);
   }
 
+  .footer-learn-more-btn:hover {
+    background: rgb(156, 105, 226);
+  }
+
   .grid-rectangle:hover {
     transform: scale(1.05);
+  }
+
+  .email-phone:hover {
+    color: rgb(156, 105, 226);
+  }
+
+  .features-footer:hover {
+    color: rgb(156, 105, 226);
   }
 }
 
@@ -585,7 +805,7 @@ body {
     font-size: 20px;
   }
 
-  .title-features-section {
+  .title-footer-features-sections {
     width: 500px;
     font-size: 26px;
     margin-bottom: 40px;
@@ -656,6 +876,42 @@ body {
     width: 45px;
     height: 27px;
   }
+
+  .testimonials-title {
+    font-size: 26px;
+    padding: 20px;
+  }
+
+  .client-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .first-testimonial {
+    width: 500px;
+    height: 300px;
+  }
+
+  .testimonial-name {
+    font-size: 20px;
+  }
+
+  .testimonial-position {
+    font-size: 16px;
+  }
+
+  .testimonial-content {
+    font-size: 16px;
+  }
+
+  .testimonials-items {
+    margin-bottom: 30px;
+  }
+
+  .footer-title {
+    font-size: 26px;
+    padding: 5px 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -712,7 +968,6 @@ body {
 
   .btn-learn-more {
     padding: 18px 38px;
-    border-radius: 50px;
     font-size: 18px;
     cursor: pointer;
   }
@@ -756,7 +1011,7 @@ body {
     padding: 150px 0;
   }
 
-  .title-features-section {
+  .title-footer-features-sections {
     font-size: 30px;
   }
 
@@ -773,6 +1028,101 @@ body {
   .grid-rectangle {
     width: 350px;
     height: 280px;
+  }
+
+  .testimonials-container {
+    align-items: start;
+    margin-bottom: 150px;
+  }
+
+  .testimonials-title {
+    font-size: 30px;
+    padding: 40px;
+  }
+
+  .client-photo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .testimonial {
+    flex-direction: row;
+    gap: 20px;
+    align-items: start;
+    justify-content: flex-start;
+    padding: 50px 30px;
+  }
+
+  .info-testimonials {
+    align-items: start;
+    padding: 20px 0;
+  }
+
+  .testimonials-items {
+    padding: 0 40px;
+    margin-bottom: 30px;
+  }
+
+  .scroll-items {
+    width: 100%;
+    padding: 0 40px 19px 40px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .second-testimonial {
+    display: flex;
+  }
+
+  .third-testimonial {
+    display: flex;
+  }
+
+  .footer-container {
+    gap: 30px;
+  }
+
+  .first-footer-section {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: start;
+  }
+
+  .footer-title {
+    font-size: 30px;
+  }
+
+  .footer-btns {
+    flex-direction: row;
+  }
+
+  .second-footer-section {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .address {
+    text-align: start;
+    padding: 40px 0;
+  }
+
+  .company-info {
+    align-items: flex-start;
+  }
+
+  .about-help-social-footer {
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .about-help-social-titles {
+    margin-bottom: 20px;
+  }
+
+  .third-footer-section {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -847,7 +1197,7 @@ body {
     font-size: 18px;
   }
 
-  .title-features-section {
+  .title-footer-features-sections {
     width: 584px;
     font-size: 40px;
   }
@@ -918,5 +1268,99 @@ body {
   .third-ellipse {
     width: 62px;
     height: 36px;
+  }
+
+  .testimonials-title {
+    font-size: 40px;
+    padding-top: 110px;
+    padding-left: 94px;
+    margin-bottom: 48px;
+  }
+
+  .testimonials-items {
+    padding-left: 98px;
+    margin-bottom: 60px;
+  }
+
+  .first-testimonial {
+    width: 645px;
+    height: 330px;
+    margin-right: 14px;
+    box-shadow: 0 20px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .testimonial {
+    padding: 60px 70px;
+    justify-content: flex-start;
+  }
+
+  .client-photo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .testimonial-name {
+    font-size: 18px;
+  }
+
+  .testimonial-position {
+    font-size: 14px;
+  }
+
+  .testimonial-content {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .second-testimonial {
+    width: 400px;
+    height: 330px;
+    padding-left: 40px;
+    box-shadow: 0 20px 0 rgba(65, 0, 153, 0.1);
+  }
+
+  .third-testimonial {
+    width: 400px;
+    height: 330px;
+    padding-left: 40px;
+    box-shadow: 0 20px 0 rgba(65, 0, 153, 0.1);
+  }
+
+  .scroll-items {
+    padding: 0 94px;
+    margin-bottom: 58px;
+  }
+
+  .first-footer-section {
+    padding: 80px 0;
+  }
+
+  .footer-title {
+    padding: 10px 0;
+    font-size: 40px;
+  }
+
+  .footer-text {
+    font-size: 18px;
+  }
+
+  .footer-learn-more-btn {
+    padding: 18px 38px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .second-footer-section {
+    padding: 70px 0;
+  }
+
+  .address {
+    padding-top: 67px;
+    padding-bottom: 10px;
+  }
+
+  .third-footer-section {
+    padding: 18px 0;
+    margin-bottom: 58px;
   }
 }
